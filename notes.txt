@@ -1,0 +1,1 @@
+building_name:string street_address:string latitude:float longitude:float date:datetime sources:string[] 
