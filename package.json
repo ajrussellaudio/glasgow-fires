@@ -1,0 +1,12 @@
+{
+  "name": "glasgow-fires",
+  "version": "0.1.0",
+  "description": "A map of fires in non-residential property in Glasgow",
+  "scripts": {
+    "build": "cd client && npm install && npm run build",
+    "deploy": "cp -a client/build/. public/",
+    "heroku-postbuild": "npm run build && npm run deploy"
+  },
+  "author": "Alan Russell",
+  "license": "MIT"
+}
