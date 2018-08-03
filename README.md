@@ -1,24 +1,11 @@
-# README
+# :fire: Glasgow Fires :fire:
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is a map of fires in Glasgow, because we seem to have so many that it's hard to keep track.
 
-Things you may want to cover:
+This is built with a Ruby on Rails API, with Active Admin. The `client` folder is a React app, with LeafletJS for the map.
 
-* Ruby version
+## To do:
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Add more incidents
+- Add news sources for each fire
+- Make it look dope
