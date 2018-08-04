@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  publication: MyString
+  headline: MyString
+  url: MyString
+  fire: one
+
+two:
+  publication: MyString
+  headline: MyString
+  url: MyString
+  fire: two

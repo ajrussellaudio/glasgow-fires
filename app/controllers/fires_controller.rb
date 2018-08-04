@@ -4,7 +4,7 @@ class FiresController < ApiController
   # GET /fires
   def index
     @fires = Fire.all
-    render json: @fires
+    render json: @fires.to_json(include: :news_sources)
   end
 
   # GET /fires/1

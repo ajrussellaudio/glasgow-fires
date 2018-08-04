@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2018_08_03_214013) do
+ActiveRecord::Schema.define(version: 2018_08_04_001945) do
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string "namespace"
@@ -51,6 +51,16 @@ ActiveRecord::Schema.define(version: 2018_08_03_214013) do
     t.datetime "date"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "news_sources", force: :cascade do |t|
+    t.string "publication"
+    t.string "headline"
+    t.string "url"
+    t.integer "fire_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["fire_id"], name: "index_news_sources_on_fire_id"
   end
 
 end
