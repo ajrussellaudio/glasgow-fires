@@ -7,6 +7,9 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
+Fire.delete_all
+NewsSource.delete_all
+
 thaiOrchid = Fire.create(
   building_name: "Thai Orchid (?)",
   street_address: "336 Argyle St",
@@ -46,5 +49,47 @@ stobhill.news_sources.create([
     publication: "Daily Record",
     headline: "Two teenagers arrested after major Glasgow fire at derelict Stobhill Hospital",
     url: "https://www.dailyrecord.co.uk/news/scottish-news/two-teenagers-arrested-after-major-13029247"
+  }
+])
+
+art_school = Fire.create(
+  building_name: "Glasgow School of Art (Mackintosh building)",
+  street_address: "167 Renfrew St",
+  latitude: 55.866147,
+  longitude: -4.2636933,
+  date: Date.new(2018, 6, 15)
+)
+
+art_school.news_sources.create([
+  {
+    publication: "BBC News",
+    headline: "Glasgow fire: Art school's Mackintosh building extensively damaged",
+    url: "https://www.bbc.co.uk/news/uk-scotland-glasgow-west-44504659"
+  },
+  {
+    publication: "The Guardian",
+    headline: "'Heartbreaking': fire guts Glasgow School of Art for second time",
+    url: "https://www.theguardian.com/uk-news/2018/jun/16/firefighters-tackle-blaze-at-glasgow-school-of-art"
+  }
+])
+
+victorias = Fire.create(
+  building_name: "Victoria's Nightclub",
+  street_address: "98 Sauchiehall St",
+  latitude: 55.8648109,
+  longitude: -4.2563089,
+  date: Date.new(2018, 3, 22)
+)
+
+victorias.news_sources.create([
+  {
+    publication: "The Scottish Sun",
+    headline: "'DEVASTATED' Glasgow fire destroys Victoria’s Nightclub as gutted revellers pay tribute to beloved Sauchiehall Street venue",
+    url: "https://www.thescottishsun.co.uk/news/scottish-news/2401996/glasgow-fire-victorias-nightclub-sauchiehall-street-destroyed/"
+  },
+  {
+    publication: "Glasgow Live",
+    headline: "Sauchiehall Street fire broke out in roof space above Victoria's Nightclub",
+    url: "https://www.glasgowlive.co.uk/news/glasgow-news/sauchiehall-street-fire-broke-out-14443807"
   }
 ])
