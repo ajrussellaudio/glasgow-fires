@@ -7,8 +7,8 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 AdminUser.create!(email: 'admin@example.com', password: 'password', password_confirmation: 'password') if Rails.env.development?
 
-Fire.delete_all
 NewsSource.delete_all
+Fire.delete_all
 
 thaiOrchid = Fire.create(
   building_name: "Thai Orchid (?)",
