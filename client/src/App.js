@@ -3,20 +3,20 @@ import Map from "./components/Map";
 
 class App extends Component {
   state = {
-    fires: []
+    buildings: []
   };
 
   componentDidMount() {
-    fetch("/api/fires")
+    fetch("/api/buildings")
       .then(res => res.json())
-      .then(fires => this.setState({ fires: fires }))
+      .then(buildings => this.setState({ buildings: buildings }))
       .catch(err => console.error(err));
   }
 
   render() {
     return (
       <div className="App">
-        <Map points={this.state.fires} />
+        <Map points={this.state.buildings} />
       </div>
     );
   }

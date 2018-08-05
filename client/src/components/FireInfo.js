@@ -1,21 +1,23 @@
 import React from "react";
-import { Popup } from "react-leaflet";
 import moment from "moment";
+import NewsSource from "./NewsSource";
 
-const FireInfo = ({ building_name, street_address, date, news_sources }) => (
-  <Popup>
-    <h3>
-      {building_name}, {street_address}
-    </h3>
-    <p>{moment(date).format("ddd, Do MMM YYYY")}</p>
+const FireInfo = ({ date, cause, deaths, injuries, aftermath, sources }) => (
+  <div>
+    <h4>{moment(date).format("dddd, Do MMMM YYYY")}</h4>
+    <p>Cause: {cause}</p>
+    <p>
+      Deaths: {deaths} | Injuries: {injuries}
+    </p>
+    {aftermath && <p>{aftermath}</p>}
     <ul>
-      {news_sources.map(({ publication, headline, url }) => (
-        <li>
-          <span>{headline}</span> | <a href={url}>{publication}</a>
+      {sources.map(source => (
+        <li key={source.id}>
+          <NewsSource {...source} />
         </li>
       ))}
     </ul>
-  </Popup>
+  </div>
 );
 
 export default FireInfo;

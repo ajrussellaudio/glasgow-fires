@@ -1,6 +1,6 @@
 import React from "react";
 import { Map, Marker, TileLayer } from "react-leaflet";
-import FireInfo from "./FireInfo";
+import InfoWindow from "../containers/InfoWindow";
 
 function extractPosition(point) {
   return {
@@ -15,7 +15,7 @@ export default props => {
   const markers = props.points.map(point => {
     return (
       <Marker position={extractPosition(point)} key={point.id}>
-        <FireInfo {...point} />
+        <InfoWindow {...point} />
       </Marker>
     );
   });
