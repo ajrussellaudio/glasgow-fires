@@ -16,7 +16,7 @@ ActiveAdmin.register Source do
   form do |f|
     f.semantic_errors
     f.inputs do
-      input :fire_id, label: "Fire", as: :select, collection: Fire.all.map { |fire| "#{fire.building.name}, #{fire.date.iso8601}"}
+      input :fire_id, label: "Fire", as: :select, collection: Fire.all.map { |fire| ["#{fire.building.name}, #{fire.date.iso8601}", fire.id]}
       input :url
       input :headline
       input :publication
