@@ -1,4 +1,4 @@
 class Building < ApplicationRecord
-  enum category: [ :unlisted, :a, :b, :c ]
+  enum category: [ :unlisted, :A, :B, :C ]
   has_many :fires
 end
