@@ -12,7 +12,14 @@ class BuildingsController < ApiController
     render json: @building.to_json(
       :except => [:created_at, :updated_at],
       :include => {
-        :fires => { :except => [:created_at, :updated_at] }
+        :fires => {
+          :except => [:created_at, :updated_at],
+          :include => {
+            :sources => {
+              :except => [:created_at, :updated_at]
+            }
+          }
+        }
       }
     )
   end

@@ -19,6 +19,19 @@ art_school = Building.create(
   category: 1
 )
 
-art_school.fires.create(
+art_school_2018_fire = art_school.fires.create(
   date: Date.new(2018, 6, 15)
 )
+
+art_school_2018_fire.sources.create([
+  {
+    publication: "BBC News",
+    headline: "Glasgow fire: Art school's Mackintosh building extensively damaged",
+    url: "https://www.bbc.co.uk/news/uk-scotland-glasgow-west-44504659"
+  },
+  {
+    publication: "The Guardian",
+    headline: "'Heartbreaking': fire guts Glasgow School of Art for second time",
+    url: "https://www.theguardian.com/uk-news/2018/jun/16/firefighters-tackle-blaze-at-glasgow-school-of-art"
+  }
+])

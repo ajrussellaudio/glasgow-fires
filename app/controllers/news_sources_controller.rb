@@ -1,3 +1,0 @@
-class NewsSourcesController < ApiController
-
-end
