@@ -43,24 +43,4 @@ ActiveRecord::Schema.define(version: 2018_08_04_001945) do
     t.index ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true
   end
 
-  create_table "fires", force: :cascade do |t|
-    t.string "building_name"
-    t.string "street_address"
-    t.float "latitude"
-    t.float "longitude"
-    t.datetime "date"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-  end
-
-  create_table "news_sources", force: :cascade do |t|
-    t.string "publication"
-    t.string "headline"
-    t.string "url"
-    t.integer "fire_id"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
-    t.index ["fire_id"], name: "index_news_sources_on_fire_id"
-  end
-
 end
