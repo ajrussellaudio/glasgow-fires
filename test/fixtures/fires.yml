@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  date: 2018-08-05
+  cause: MyString
+  deaths: 1
+  injuries: 1
+  aftermath: MyText
+  building: one
+
+two:
+  date: 2018-08-05
+  cause: MyString
+  deaths: 1
+  injuries: 1
+  aftermath: MyText
+  building: two
