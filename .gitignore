@@ -28,6 +28,3 @@
 # Ignore public, as it is built on deploy
 # Place files for /public in /client/public
 /public
-
-# Ignore client folder, as it has its own repo
-/client
