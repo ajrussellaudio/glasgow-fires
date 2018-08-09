@@ -7,6 +7,7 @@ const BuildingInfo = ({
   category,
   history,
   wikipedia,
+  canmore,
   fires
 }) => (
   <div>
@@ -20,6 +21,9 @@ const BuildingInfo = ({
         <a href={wikipedia}>Wikipedia</a>
       </p>
     )}
+    {canmore && <p>
+      <a href={canmore}>Canmore</a>
+    </p>}
     {fires.map(fire => <FireInfo {...fire} key={fire.id} />)}
   </div>
 );
